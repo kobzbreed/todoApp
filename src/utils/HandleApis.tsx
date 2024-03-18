@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:8080/todos";
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://todo-server-1-active-server.onrender.com/todos"
+    : "http://localhost:8080/todos";
 
 export interface ToDoItem {
   _id: string;
