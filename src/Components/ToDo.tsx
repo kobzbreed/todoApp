@@ -1,7 +1,13 @@
 import { AiFillDelete } from "react-icons/ai";
 import { BiEdit } from "react-icons/bi";
 
-function ToDo({ text, updateMode, deleteToDo }) {
+interface ToDoProps {
+  text: string;
+  updateMode: () => void;
+  deleteToDo: () => void;
+}
+
+function ToDo({ text, updateMode, deleteToDo }: ToDoProps) {
   return (
     <div className="mt-4">
       <div className="todo bg-black text-white p-3 flex justify-between items-center mb-4">
